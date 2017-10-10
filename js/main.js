@@ -1,6 +1,6 @@
 var alphaDust = function () {
 
-    var _menuOn = false;
+    var _menuOn = true;
 
     function initPostHeader() {
         $('.main .post').each(function () {
@@ -45,10 +45,10 @@ var alphaDust = function () {
     function initMenu() {
 
         $('nav a').click(function () {
-            if(_menuOn) {
-                _menuHide();
-            } else {
+            if(_menuOn = true) {
                 _menuShow();
+            } else {
+                _menuHide();
             }
         });
 
@@ -67,10 +67,9 @@ var alphaDust = function () {
     return {
         initPostHeader: initPostHeader,
         initMenu: initMenu,
-        displayArchives: displayArchives
+        displayArchives: displayArchives,
     };
 }();
-
 
 $(document).ready(function () {
     alphaDust.initPostHeader();
